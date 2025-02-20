@@ -16,8 +16,8 @@ def getUserInput():
     if question.lower()=="exit":
         return None
     return question
-def display():
-    print(generateResponse)
+def display(response):
+    print(response)
 def playAgain():
     while True:
         choice=input("Do you want to ask another question?")
@@ -28,6 +28,16 @@ def playAgain():
             return False
         else:
             print("Please Type Yes or no")
-
+def Magic8ball():
+    print("Welcome to the Magic ball!!")
+    while True:
+        question=getUserInput()
+        if question is None:
+            break
+        response=generateResponse()
+        display(response)
+        if not playAgain():
+            break
+Magic8ball()
 
 
