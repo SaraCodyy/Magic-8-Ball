@@ -19,6 +19,8 @@ def getUserInput():
     if question.lower()=="exit":
         return None
     return question
+def display():
+    print(generateResponse)
 
 
 
